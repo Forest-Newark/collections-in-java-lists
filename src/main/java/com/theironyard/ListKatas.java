@@ -1,5 +1,7 @@
 package com.theironyard;
 
+import java.util.ArrayList;
+
 /**
  * This exercise is another collection of katas. Follow the instructions below
  * to create the specified methods.
@@ -22,6 +24,13 @@ public class ListKatas {
      * @return An ArrayList of Integers, starting at 0 and continuing to n-1
      */
     // todo: create arrayListIndexes() method
+    public static ArrayList<Integer> arrayListIndexes(int n) {
+        ArrayList<Integer> indexes = new ArrayList<>();
+        for (int x = 0; x < n; x++) {
+            indexes.add(x);
+        }
+        return indexes;
+    }
 
     /**
      * Write a static method named sumList() that accepts an ArrayList of
@@ -34,6 +43,16 @@ public class ListKatas {
      */
     // todo: create sumList() method
 
+    public static double sumList(ArrayList<Double> numbers) {
+        double sum = 0;
+        for (double number : numbers) {
+            sum += number;
+        }
+        return sum;
+
+    }
+
+
     /**
      * Create a static method named concatenateStrings() that accepts an
      * ArrayList of Strings and concentrates them together. The ArrayList of
@@ -44,6 +63,18 @@ public class ListKatas {
      * @return a concatenation of the provided ArrayList of strings.
      */
     // todo: create concatenateStrings() method
+    public static String concatenateStrings(ArrayList<String> strings) {
+        String newString = "";
+
+        for(String word:strings) {
+            newString += word;
+        }
+
+        return newString;
+
+    }
+
+
 
     /**
      * Create a static method named reverseListOfStrings() that accepts an
@@ -68,5 +99,16 @@ public class ListKatas {
      * @return an ArrayList of Strings in reverse order
      */
     // todo: create reverseListOfStrings() method
+    public static ArrayList<String> reverseListOfStrings(ArrayList<String> strings) {
+        ArrayList<String> reverseArrayList = new ArrayList<>();
+
+        for (int x = strings.size()-1; x >= 0;x--) {
+            reverseArrayList.add(strings.get(x));
+        }
+
+        return reverseArrayList;
+
+    }
+
 
 }
